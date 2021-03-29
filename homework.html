@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const random_a = (max, min) => {
+            return Math.round((Math.random()*(max-min))) + 1
+        }
+        
+        
+        let arr1 =[]
+        let random = random_a(38, 1)
+        for (i=1; i<=6; i++) {
+            
+            arr1.push(random)
+            while (arr1.includes(random)) {
+                random = random_a(38, 1)
+                
+            }
+            console.log(random)
+            console.log(arr1)
+             
+            
+        }
+        
+        
+        
+        const random_b = (random) => {
+            return Math.round((Math.random()*7)) + 1
+        }
+
+        document.write(`A區威力彩號碼為 ${arr1}`)
+        document.write('<br>')
+        document.write(`B區威力彩號碼為 ${random_b()}`)
+
+    </script>
+</body>
+</html>
